@@ -1,38 +1,32 @@
 class ConsoleInterface
-  # Константа с массивом фигур, файлы из папки figures
   FIGURES =
       Dir["#{__dir__}/../data/figures/*.txt"].
       sort.
       map { |file_name| File.read(file_name) }
 
-  # Экземпляр класса Game на входе у конструктора ConsoleInterface
   def initialize(game)
     @game = game
   end
 
-  # Выводится текущее состояние игры.
   def print_out
     puts <<~END
-      Слово: #{word_to_show}
-      #{figure}
-      Ошибки (#{@game.errors_made}): #{errors_to_show}
+      #{"Слово: #{word_to_show}".blue}
+      #{"#{figure}".yellow}
+      #{"Ошибки (#{@game.errors_made}): #{errors_to_show}".red}
       У вас осталось ошибок: #{@game.errors_allowed}
-
     END
 
     if @game.won?
-      puts "Поздравляем, вы выиграли!"
+      puts "Поздравляем, вы выиграли!".green
     elsif @game.lost?
-      puts "Вы проиграли, загаданное слово: #{@game.word}"
+      puts "Вы проиграли, загаданное слово: #{@game.word}".red
     end
   end
 
-  # Возвращает фигуру из массива FIGURES, соответствующую количеству ошибок.
   def figure
     FIGURES[@game.errors_made]
   end
 
-  # Метод, который готовит слово для вывода "на игровом табло".
   def word_to_show
     result =
       @game.letters_to_guess.map do |letter|
@@ -46,14 +40,13 @@ class ConsoleInterface
     result.join(" ")
   end
 
-  # Склеивает массив ошибочных букв
   def errors_to_show
     @game.errors.join(", ")
   end
     
   def greeting
-    puts "Всем привет!"
-    puts 'Начинаем игру Виселица!'
+    puts "Всем привет!".green
+    puts 'Начинаем игру Виселица!'.green
   end
 
   # Метод получает букву и приводит её к верхнему регистру

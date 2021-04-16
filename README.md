@@ -9,10 +9,11 @@ CLI-версия популярной настольной игры Висели
 
 [Википедия](https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%81%D0%B5%D0%BB%D0%B8%D1%86%D0%B0_(%D0%B8%D0%B3%D1%80%D0%B0))
 
-
-[![asciicast](https://asciinema.org/a/1r6ye3mdcF4koz2qxg28IVPMw.svg)](https://asciinema.org/a/1r6ye3mdcF4koz2qxg28IVPMw)
+![Hangman Demo](https://i.imgur.com/aOIx2nB.png)
 
 ### Как запустить?
+```$ bundle install```
+```$ bundle exec main.rb```
 ```$ ruby main.rb```
 
 ### Как играть:
