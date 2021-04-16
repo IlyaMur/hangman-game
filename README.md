@@ -13,8 +13,7 @@ CLI-версия популярной настольной игры Висели
 
 ### Как запустить?
 ```$ bundle install```  
-```$ bundle exec main.rb```  
-```$ ruby main.rb```  
+```$ bundle exec ruby main.rb```  
 
 ### Как играть:
 
