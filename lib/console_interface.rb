@@ -49,7 +49,6 @@ class ConsoleInterface
     puts 'Начинаем игру Виселица!'.green
   end
 
-  # Метод получает букву и приводит её к верхнему регистру
   def get_input
     print "Введите следующую букву: "
     input = gets
