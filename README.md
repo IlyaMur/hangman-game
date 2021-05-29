@@ -12,8 +12,8 @@ CLI-версия популярной настольной игры Висели
 ![Hangman Demo](https://i.imgur.com/aOIx2nB.png)
 
 ### Как запустить?
-```$ bundle install```  
-```$ bundle exec ruby main.rb```  
+    $ bundle install
+    $ bundle exec ruby main.rb
 
 ### Как играть:
 
